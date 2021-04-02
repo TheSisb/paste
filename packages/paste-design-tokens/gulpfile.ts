@@ -286,10 +286,12 @@ gulp.task('browsersync', () =>
 );
 
 gulp.task('watch', () => {
-  gulp.watch([`${paths.aliases}/**/*.*`, `${paths.globals}/**/*.*`], gulp.series('tokens:all', 'docs'));
-  gulp.watch([`${paths.docs}/**/*.*`]).on('change', browserSync.reload);
+  gulp.watch(
+    [`${paths.aliases}/**/*.*`, `${paths.globals}/**/*.*`],
+    gulp.series('tokens:raw', 'tokens:es6', 'tokens:es6:dts')
+  );
 });
 
-gulp.task('dev', gulp.series('clean', 'tokens:all', 'docs', gulp.parallel('watch', 'browsersync')));
+gulp.task('dev', gulp.series('tokens:raw', 'tokens:es6', 'tokens:es6:dts', 'watch'));
 
 gulp.task('default', gulp.series('clean', 'tokens:all', 'docs'));
