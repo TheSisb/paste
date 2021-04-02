@@ -1,4 +1,4 @@
-import {
+import type {
   backgroundColors,
   borderColors,
   borderWidths,
@@ -15,19 +15,49 @@ import {
   zIndices,
 } from '@twilio-paste/design-tokens';
 
+export type GenericBackgroundColors = Partial<{[key in keyof typeof backgroundColors]: any}>;
+export type GenericBorderColors = Partial<{[key in keyof typeof borderColors]: any}>;
+export type GenericBorderWidths = Partial<{[key in keyof typeof borderWidths]: any}>;
+export type GenericRadii = Partial<{[key in keyof typeof radii]: any}>;
+export type GenericColors = Partial<{[key in keyof typeof colors]: any}>;
+export type GenericFonts = Partial<{[key in keyof typeof fonts]: any}>;
+export type GenericFontSizes = Partial<{[key in keyof typeof fontSizes]: any}>;
+export type GenericFontWeights = Partial<{[key in keyof typeof fontWeights]: any}>;
+export type GenericLineHeights = Partial<{[key in keyof typeof lineHeights]: any}>;
+export type GenericBoxShadows = Partial<{[key in keyof typeof boxShadows]: any}>;
+export type GenericSizings = Partial<{[key in keyof typeof sizings]: any}>;
+export type GenericSpacings = Partial<{[key in keyof typeof spacings]: any}>;
+export type GenericTextColors = Partial<{[key in keyof typeof textColors]: any}>;
+export type GenericZIndices = Partial<{[key in keyof typeof zIndices]: any}>;
+
+export type AllGenericTokens = GenericBackgroundColors &
+  GenericBorderColors &
+  GenericBorderWidths &
+  GenericRadii &
+  GenericColors &
+  GenericFonts &
+  GenericFontSizes &
+  GenericFontWeights &
+  GenericLineHeights &
+  GenericBoxShadows &
+  GenericSizings &
+  GenericSpacings &
+  GenericTextColors &
+  GenericZIndices;
+
 export interface GenericTokenShape {
-  backgroundColors: Partial<{[key in keyof typeof backgroundColors]: any}>;
-  borderColors: Partial<{[key in keyof typeof borderColors]: any}>;
-  borderWidths: Partial<{[key in keyof typeof borderWidths]: any}>;
-  radii: Partial<{[key in keyof typeof radii]: any}>;
-  colors: Partial<{[key in keyof typeof colors]: any}>;
-  fonts: Partial<{[key in keyof typeof fonts]: any}>;
-  fontSizes: Partial<{[key in keyof typeof fontSizes]: any}>;
-  fontWeights: Partial<{[key in keyof typeof fontWeights]: any}>;
-  lineHeights: Partial<{[key in keyof typeof lineHeights]: any}>;
-  boxShadows: Partial<{[key in keyof typeof boxShadows]: any}>;
-  sizings: Partial<{[key in keyof typeof sizings]: any}>;
-  spacings: Partial<{[key in keyof typeof spacings]: any}>;
-  textColors: Partial<{[key in keyof typeof textColors]: any}>;
-  zIndices: Partial<{[key in keyof typeof zIndices]: any}>;
+  backgroundColors: GenericBackgroundColors;
+  borderColors: GenericBorderColors;
+  borderWidths: GenericBorderWidths;
+  radii: GenericRadii;
+  colors: GenericColors;
+  fonts: GenericFonts;
+  fontSizes: GenericFontSizes;
+  fontWeights: GenericFontWeights;
+  lineHeights: GenericLineHeights;
+  boxShadows: GenericBoxShadows;
+  sizings: GenericSizings;
+  spacings: GenericSpacings;
+  textColors: GenericTextColors;
+  zIndices: GenericZIndices;
 }

@@ -22,6 +22,7 @@ export {ThemeVariants} from './constants';
 export {generateThemeFromTokens} from './generateThemeFromTokens';
 export {generateTokensFromTheme} from './generateTokensFromTheme';
 export {Theme};
+export * from './useThemeContrastCheck';
 
 // utils
 export {remToPx} from './utils/remToPx';

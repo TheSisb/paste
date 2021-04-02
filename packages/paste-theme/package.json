@@ -22,6 +22,9 @@
     "clean": "rm -rf ./dist",
     "tsc": "tsc"
   },
+  "dependencies": {
+    "color-combos": "^1.0.11"
+  },
   "peerDependencies": {
     "@twilio-paste/animation-library": "^0.3.1",
     "@twilio-paste/design-tokens": "^6.6.0",
