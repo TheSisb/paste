@@ -5,27 +5,12 @@ slug: /roadmap/
 ---
 
 import {graphql} from 'gatsby';
-import {Roadmap} from '../../components/Roadmap';
 export const pageQuery = graphql`
   {
     mdx(fields: {slug: {eq: "/roadmap/"}}) {
       headings {
         depth
         value
-      }
-    }
-    allAirtable(filter: {}, sort: {fields: [data___Release_, data___Feature]}) {
-      group(field: data___Release_) {
-        release: fieldValue
-        edges {
-          node {
-            data {
-              Release_
-              Feature
-              Public_Description
-            }
-          }
-        }
       }
     }
   }
@@ -40,8 +25,6 @@ export const pageQuery = graphql`
 <h1>{props.pageContext.frontmatter.title}</h1>
 
 <p>{props.pageContext.frontmatter.description}</p>
-
-<Roadmap data={props.data.allAirtable.group} />
 
 </content>
 
