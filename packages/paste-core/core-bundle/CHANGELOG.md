@@ -1,5 +1,17 @@
 # Change Log
 
+## 9.0.2
+
+### Patch Changes
+
+- [`35d9dfda`](https://github.com/twilio-labs/paste/commit/35d9dfdafff3e5e7b05fa46d600d2d3f0851a6b1) [#1332](https://github.com/twilio-labs/paste/pull/1332) Thanks [@TheSisb](https://github.com/TheSisb)! - Fixed truncation on Disclosure headings when using Truncate component
+
+* [`fd8cbb89`](https://github.com/twilio-labs/paste/commit/fd8cbb89a9459fd5e012cba8f45060ad2e384e24) [#1345](https://github.com/twilio-labs/paste/pull/1345) Thanks [@gloriliale](https://github.com/gloriliale)! - Avatar: fixed size prop to make it optional and have a default of icon-size-70.
+
+* Updated dependencies [[`35d9dfda`](https://github.com/twilio-labs/paste/commit/35d9dfdafff3e5e7b05fa46d600d2d3f0851a6b1), [`fd8cbb89`](https://github.com/twilio-labs/paste/commit/fd8cbb89a9459fd5e012cba8f45060ad2e384e24)]:
+  - @twilio-paste/disclosure@5.0.3
+  - @twilio-paste/avatar@2.1.1
+
 ## 9.0.1
 
 ### Patch Changes
