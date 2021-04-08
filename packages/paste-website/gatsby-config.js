@@ -170,20 +170,6 @@ const gatsbyConfig = {
       },
     },
     {
-      resolve: `gatsby-source-airtable`,
-      options: {
-        apiKey: process.env.AIRTABLE_APIKEY,
-        concurrency: 5,
-        tables: [
-          {
-            baseId: process.env.AIRTABLE_BASEID,
-            tableName: `System`,
-            tableView: `Roadmap`,
-          },
-        ],
-      },
-    },
-    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
